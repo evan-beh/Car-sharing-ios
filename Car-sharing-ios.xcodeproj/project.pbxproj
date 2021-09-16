@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24E013480B98C744320710F7 /* Pods_Car_sharing_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC9CC298576D87995BC4CB5 /* Pods_Car_sharing_ios.framework */; };
+		C4B9753728BAEC0DA622EEB7 /* Pods_Car_sharing_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89ADEFFFB80A51A528DE849 /* Pods_Car_sharing_iosTests.framework */; };
+		D0F80097BD363D86A0A113CE /* Pods_Car_sharing_ios_Car_sharing_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639E7B2B64BFDE10DB418249 /* Pods_Car_sharing_ios_Car_sharing_iosUITests.framework */; };
+		F9023FD426F21D3B001689F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9023FD326F21D3B001689F1 /* AppDelegate.swift */; };
+		F9023FD626F21D3B001689F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9023FD526F21D3B001689F1 /* SceneDelegate.swift */; };
+		F9023FDB26F21D3B001689F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9023FD926F21D3B001689F1 /* Main.storyboard */; };
+		F9023FDD26F21D3C001689F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9023FDC26F21D3C001689F1 /* Assets.xcassets */; };
+		F9023FE026F21D3C001689F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9023FDE26F21D3C001689F1 /* LaunchScreen.storyboard */; };
+		F9023FEB26F21D3C001689F1 /* Car_sharing_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9023FEA26F21D3C001689F1 /* Car_sharing_iosTests.swift */; };
+		F9023FF626F21D3C001689F1 /* Car_sharing_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9023FF526F21D3C001689F1 /* Car_sharing_iosUITests.swift */; };
+		F902400826F21EAC001689F1 /* CarListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902400626F21EAC001689F1 /* CarListingViewController.swift */; };
+		F902400B26F21F2E001689F1 /* CarBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902400A26F21F2E001689F1 /* CarBookingViewController.swift */; };
+		F902400E26F22051001689F1 /* CarListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902400C26F22051001689F1 /* CarListingTableViewCell.swift */; };
+		F902400F26F22051001689F1 /* CarListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F902400D26F22051001689F1 /* CarListingTableViewCell.xib */; };
+		F902401126F224D0001689F1 /* CarListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902401026F224D0001689F1 /* CarListingViewModel.swift */; };
+		F902401426F22827001689F1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902401326F22827001689F1 /* UIView+Extension.swift */; };
+		F902401626F235AF001689F1 /* CarBookingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902401526F235AF001689F1 /* CarBookingMainViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9023FE726F21D3C001689F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9023FC826F21D3B001689F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9023FCF26F21D3B001689F1;
+			remoteInfo = "Car-sharing-ios";
+		};
+		F9023FF226F21D3C001689F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9023FC826F21D3B001689F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9023FCF26F21D3B001689F1;
+			remoteInfo = "Car-sharing-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EC9CC298576D87995BC4CB5 /* Pods_Car_sharing_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Car_sharing_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B14388B3F53C094F86DEBA8 /* Pods-Car-sharing-ios-Car-sharing-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car-sharing-ios-Car-sharing-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Car-sharing-ios-Car-sharing-iosUITests/Pods-Car-sharing-ios-Car-sharing-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		43FD0375F7810EA766710706 /* Pods-Car-sharing-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car-sharing-ios.release.xcconfig"; path = "Target Support Files/Pods-Car-sharing-ios/Pods-Car-sharing-ios.release.xcconfig"; sourceTree = "<group>"; };
+		507BCF93FC469D61A1CAA3F8 /* Pods-Car-sharing-ios-Car-sharing-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car-sharing-ios-Car-sharing-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-Car-sharing-ios-Car-sharing-iosUITests/Pods-Car-sharing-ios-Car-sharing-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		639E7B2B64BFDE10DB418249 /* Pods_Car_sharing_ios_Car_sharing_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Car_sharing_ios_Car_sharing_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0FD0A9DF4C0759D3FB1EE8E /* Pods-Car-sharing-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car-sharing-iosTests.release.xcconfig"; path = "Target Support Files/Pods-Car-sharing-iosTests/Pods-Car-sharing-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		E89ADEFFFB80A51A528DE849 /* Pods_Car_sharing_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Car_sharing_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE180271CB16E8D5B253969 /* Pods-Car-sharing-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car-sharing-ios.debug.xcconfig"; path = "Target Support Files/Pods-Car-sharing-ios/Pods-Car-sharing-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		F9023FD026F21D3B001689F1 /* Car-sharing-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Car-sharing-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9023FD326F21D3B001689F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9023FD526F21D3B001689F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F9023FDA26F21D3B001689F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9023FDC26F21D3C001689F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9023FDF26F21D3C001689F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9023FE126F21D3C001689F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9023FE626F21D3C001689F1 /* Car-sharing-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Car-sharing-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9023FEA26F21D3C001689F1 /* Car_sharing_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car_sharing_iosTests.swift; sourceTree = "<group>"; };
+		F9023FEC26F21D3C001689F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9023FF126F21D3C001689F1 /* Car-sharing-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Car-sharing-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9023FF526F21D3C001689F1 /* Car_sharing_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car_sharing_iosUITests.swift; sourceTree = "<group>"; };
+		F9023FF726F21D3C001689F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F902400626F21EAC001689F1 /* CarListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingViewController.swift; sourceTree = "<group>"; };
+		F902400A26F21F2E001689F1 /* CarBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBookingViewController.swift; sourceTree = "<group>"; };
+		F902400C26F22051001689F1 /* CarListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingTableViewCell.swift; sourceTree = "<group>"; };
+		F902400D26F22051001689F1 /* CarListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarListingTableViewCell.xib; sourceTree = "<group>"; };
+		F902401026F224D0001689F1 /* CarListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingViewModel.swift; sourceTree = "<group>"; };
+		F902401326F22827001689F1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		F902401526F235AF001689F1 /* CarBookingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBookingMainViewController.swift; sourceTree = "<group>"; };
+		F9C43F5C50DDC9B38D3A1AD8 /* Pods-Car-sharing-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car-sharing-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-Car-sharing-iosTests/Pods-Car-sharing-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9023FCD26F21D3B001689F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24E013480B98C744320710F7 /* Pods_Car_sharing_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9023FE326F21D3C001689F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B9753728BAEC0DA622EEB7 /* Pods_Car_sharing_iosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9023FEE26F21D3C001689F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F80097BD363D86A0A113CE /* Pods_Car_sharing_ios_Car_sharing_iosUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4447FD8BB342B37D9C615678 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EC9CC298576D87995BC4CB5 /* Pods_Car_sharing_ios.framework */,
+				639E7B2B64BFDE10DB418249 /* Pods_Car_sharing_ios_Car_sharing_iosUITests.framework */,
+				E89ADEFFFB80A51A528DE849 /* Pods_Car_sharing_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		561E7B031818A9C03CD70427 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBE180271CB16E8D5B253969 /* Pods-Car-sharing-ios.debug.xcconfig */,
+				43FD0375F7810EA766710706 /* Pods-Car-sharing-ios.release.xcconfig */,
+				2B14388B3F53C094F86DEBA8 /* Pods-Car-sharing-ios-Car-sharing-iosUITests.debug.xcconfig */,
+				507BCF93FC469D61A1CAA3F8 /* Pods-Car-sharing-ios-Car-sharing-iosUITests.release.xcconfig */,
+				F9C43F5C50DDC9B38D3A1AD8 /* Pods-Car-sharing-iosTests.debug.xcconfig */,
+				A0FD0A9DF4C0759D3FB1EE8E /* Pods-Car-sharing-iosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F9023FC726F21D3B001689F1 = {
+			isa = PBXGroup;
+			children = (
+				F9023FD226F21D3B001689F1 /* Car-sharing-ios */,
+				F9023FE926F21D3C001689F1 /* Car-sharing-iosTests */,
+				F9023FF426F21D3C001689F1 /* Car-sharing-iosUITests */,
+				F9023FD126F21D3B001689F1 /* Products */,
+				561E7B031818A9C03CD70427 /* Pods */,
+				4447FD8BB342B37D9C615678 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F9023FD126F21D3B001689F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9023FD026F21D3B001689F1 /* Car-sharing-ios.app */,
+				F9023FE626F21D3C001689F1 /* Car-sharing-iosTests.xctest */,
+				F9023FF126F21D3C001689F1 /* Car-sharing-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9023FD226F21D3B001689F1 /* Car-sharing-ios */ = {
+			isa = PBXGroup;
+			children = (
+				F902401226F22816001689F1 /* Extension */,
+				F902400526F21E5D001689F1 /* Booking */,
+				F902400426F21E58001689F1 /* Main */,
+				F902400326F21E4B001689F1 /* Home */,
+				F9023FD326F21D3B001689F1 /* AppDelegate.swift */,
+				F9023FD526F21D3B001689F1 /* SceneDelegate.swift */,
+				F9023FD926F21D3B001689F1 /* Main.storyboard */,
+				F9023FDC26F21D3C001689F1 /* Assets.xcassets */,
+				F9023FDE26F21D3C001689F1 /* LaunchScreen.storyboard */,
+				F9023FE126F21D3C001689F1 /* Info.plist */,
+			);
+			path = "Car-sharing-ios";
+			sourceTree = "<group>";
+		};
+		F9023FE926F21D3C001689F1 /* Car-sharing-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9023FEA26F21D3C001689F1 /* Car_sharing_iosTests.swift */,
+				F9023FEC26F21D3C001689F1 /* Info.plist */,
+			);
+			path = "Car-sharing-iosTests";
+			sourceTree = "<group>";
+		};
+		F9023FF426F21D3C001689F1 /* Car-sharing-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9023FF526F21D3C001689F1 /* Car_sharing_iosUITests.swift */,
+				F9023FF726F21D3C001689F1 /* Info.plist */,
+			);
+			path = "Car-sharing-iosUITests";
+			sourceTree = "<group>";
+		};
+		F902400326F21E4B001689F1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F902400626F21EAC001689F1 /* CarListingViewController.swift */,
+				F902400C26F22051001689F1 /* CarListingTableViewCell.swift */,
+				F902400D26F22051001689F1 /* CarListingTableViewCell.xib */,
+				F902401026F224D0001689F1 /* CarListingViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F902400426F21E58001689F1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F902400526F21E5D001689F1 /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				F902400A26F21F2E001689F1 /* CarBookingViewController.swift */,
+				F902401526F235AF001689F1 /* CarBookingMainViewController.swift */,
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
+		F902401226F22816001689F1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F902401326F22827001689F1 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9023FCF26F21D3B001689F1 /* Car-sharing-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9023FFA26F21D3C001689F1 /* Build configuration list for PBXNativeTarget "Car-sharing-ios" */;
+			buildPhases = (
+				2EE9D29586C9A75B7DF037E9 /* [CP] Check Pods Manifest.lock */,
+				F9023FCC26F21D3B001689F1 /* Sources */,
+				F9023FCD26F21D3B001689F1 /* Frameworks */,
+				F9023FCE26F21D3B001689F1 /* Resources */,
+				ABBC431F4152598C1188109E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Car-sharing-ios";
+			productName = "Car-sharing-ios";
+			productReference = F9023FD026F21D3B001689F1 /* Car-sharing-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9023FE526F21D3C001689F1 /* Car-sharing-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9023FFD26F21D3C001689F1 /* Build configuration list for PBXNativeTarget "Car-sharing-iosTests" */;
+			buildPhases = (
+				E5ECFDA19178513A574F43BC /* [CP] Check Pods Manifest.lock */,
+				F9023FE226F21D3C001689F1 /* Sources */,
+				F9023FE326F21D3C001689F1 /* Frameworks */,
+				F9023FE426F21D3C001689F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9023FE826F21D3C001689F1 /* PBXTargetDependency */,
+			);
+			name = "Car-sharing-iosTests";
+			productName = "Car-sharing-iosTests";
+			productReference = F9023FE626F21D3C001689F1 /* Car-sharing-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9023FF026F21D3C001689F1 /* Car-sharing-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F902400026F21D3C001689F1 /* Build configuration list for PBXNativeTarget "Car-sharing-iosUITests" */;
+			buildPhases = (
+				A53A0E685DFD9883D41146F2 /* [CP] Check Pods Manifest.lock */,
+				F9023FED26F21D3C001689F1 /* Sources */,
+				F9023FEE26F21D3C001689F1 /* Frameworks */,
+				F9023FEF26F21D3C001689F1 /* Resources */,
+				6463DBD2C8EE9157B29E21F5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9023FF326F21D3C001689F1 /* PBXTargetDependency */,
+			);
+			name = "Car-sharing-iosUITests";
+			productName = "Car-sharing-iosUITests";
+			productReference = F9023FF126F21D3C001689F1 /* Car-sharing-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9023FC826F21D3B001689F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F9023FCF26F21D3B001689F1 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					F9023FE526F21D3C001689F1 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = F9023FCF26F21D3B001689F1;
+					};
+					F9023FF026F21D3C001689F1 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = F9023FCF26F21D3B001689F1;
+					};
+				};
+			};
+			buildConfigurationList = F9023FCB26F21D3B001689F1 /* Build configuration list for PBXProject "Car-sharing-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9023FC726F21D3B001689F1;
+			productRefGroup = F9023FD126F21D3B001689F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9023FCF26F21D3B001689F1 /* Car-sharing-ios */,
+				F9023FE526F21D3C001689F1 /* Car-sharing-iosTests */,
+				F9023FF026F21D3C001689F1 /* Car-sharing-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9023FCE26F21D3B001689F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9023FE026F21D3C001689F1 /* LaunchScreen.storyboard in Resources */,
+				F9023FDD26F21D3C001689F1 /* Assets.xcassets in Resources */,
+				F9023FDB26F21D3B001689F1 /* Main.storyboard in Resources */,
+				F902400F26F22051001689F1 /* CarListingTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9023FE426F21D3C001689F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9023FEF26F21D3C001689F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EE9D29586C9A75B7DF037E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Car-sharing-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6463DBD2C8EE9157B29E21F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Car-sharing-ios-Car-sharing-iosUITests/Pods-Car-sharing-ios-Car-sharing-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Car-sharing-ios-Car-sharing-iosUITests/Pods-Car-sharing-ios-Car-sharing-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Car-sharing-ios-Car-sharing-iosUITests/Pods-Car-sharing-ios-Car-sharing-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A53A0E685DFD9883D41146F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Car-sharing-ios-Car-sharing-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABBC431F4152598C1188109E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Car-sharing-ios/Pods-Car-sharing-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Car-sharing-ios/Pods-Car-sharing-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Car-sharing-ios/Pods-Car-sharing-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5ECFDA19178513A574F43BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Car-sharing-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9023FCC26F21D3B001689F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F902401626F235AF001689F1 /* CarBookingMainViewController.swift in Sources */,
+				F902400B26F21F2E001689F1 /* CarBookingViewController.swift in Sources */,
+				F902401426F22827001689F1 /* UIView+Extension.swift in Sources */,
+				F902400826F21EAC001689F1 /* CarListingViewController.swift in Sources */,
+				F902400E26F22051001689F1 /* CarListingTableViewCell.swift in Sources */,
+				F902401126F224D0001689F1 /* CarListingViewModel.swift in Sources */,
+				F9023FD426F21D3B001689F1 /* AppDelegate.swift in Sources */,
+				F9023FD626F21D3B001689F1 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9023FE226F21D3C001689F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9023FEB26F21D3C001689F1 /* Car_sharing_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9023FED26F21D3C001689F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9023FF626F21D3C001689F1 /* Car_sharing_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9023FE826F21D3C001689F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9023FCF26F21D3B001689F1 /* Car-sharing-ios */;
+			targetProxy = F9023FE726F21D3C001689F1 /* PBXContainerItemProxy */;
+		};
+		F9023FF326F21D3C001689F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9023FCF26F21D3B001689F1 /* Car-sharing-ios */;
+			targetProxy = F9023FF226F21D3C001689F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9023FD926F21D3B001689F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9023FDA26F21D3B001689F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9023FDE26F21D3C001689F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9023FDF26F21D3C001689F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9023FF826F21D3C001689F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9023FF926F21D3C001689F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9023FFB26F21D3C001689F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBE180271CB16E8D5B253969 /* Pods-Car-sharing-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Car-sharing-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fooddelivery.app.Car-sharing-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9023FFC26F21D3C001689F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43FD0375F7810EA766710706 /* Pods-Car-sharing-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Car-sharing-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fooddelivery.app.Car-sharing-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9023FFE26F21D3C001689F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9C43F5C50DDC9B38D3A1AD8 /* Pods-Car-sharing-iosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Car-sharing-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fooddelivery.app.Car-sharing-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Car-sharing-ios.app/Car-sharing-ios";
+			};
+			name = Debug;
+		};
+		F9023FFF26F21D3C001689F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0FD0A9DF4C0759D3FB1EE8E /* Pods-Car-sharing-iosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Car-sharing-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fooddelivery.app.Car-sharing-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Car-sharing-ios.app/Car-sharing-ios";
+			};
+			name = Release;
+		};
+		F902400126F21D3C001689F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B14388B3F53C094F86DEBA8 /* Pods-Car-sharing-ios-Car-sharing-iosUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Car-sharing-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fooddelivery.app.Car-sharing-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Car-sharing-ios";
+			};
+			name = Debug;
+		};
+		F902400226F21D3C001689F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 507BCF93FC469D61A1CAA3F8 /* Pods-Car-sharing-ios-Car-sharing-iosUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Car-sharing-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fooddelivery.app.Car-sharing-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Car-sharing-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9023FCB26F21D3B001689F1 /* Build configuration list for PBXProject "Car-sharing-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9023FF826F21D3C001689F1 /* Debug */,
+				F9023FF926F21D3C001689F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9023FFA26F21D3C001689F1 /* Build configuration list for PBXNativeTarget "Car-sharing-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9023FFB26F21D3C001689F1 /* Debug */,
+				F9023FFC26F21D3C001689F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9023FFD26F21D3C001689F1 /* Build configuration list for PBXNativeTarget "Car-sharing-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9023FFE26F21D3C001689F1 /* Debug */,
+				F9023FFF26F21D3C001689F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F902400026F21D3C001689F1 /* Build configuration list for PBXNativeTarget "Car-sharing-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F902400126F21D3C001689F1 /* Debug */,
+				F902400226F21D3C001689F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9023FC826F21D3B001689F1 /* Project object */;
+}

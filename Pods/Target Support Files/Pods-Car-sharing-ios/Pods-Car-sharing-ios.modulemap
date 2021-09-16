@@ -1,0 +1,6 @@
+framework module Pods_Car_sharing_ios {
+  umbrella header "Pods-Car-sharing-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}
