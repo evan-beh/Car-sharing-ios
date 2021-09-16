@@ -6,31 +6,55 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+
+enum viewType {
+    case active
+    case upcoming
+    case ended
+
+}
+
+protocol BookingTabDelegate : AnyObject
+{
+    func routeTo(index:Int)
+    
+}
+
 
 class CarBookingViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+  
+    private let disposeBag = DisposeBag()
+    weak  var delegate: BookingTabDelegate?
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel = CarBookingViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "something"
         setUpTableView()
+        
+        viewModel.viewDidLoad()
+        setupBinding()
         // Do any additional setup after loading the view.
     }
     
 
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupBinding()
+    {
+        viewModel.bookingList.asObservable()
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] _ in
+                self?.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
+        
     }
-    */
-
 }
 
 extension CarBookingViewController: UITableViewDelegate, UITableViewDataSource
@@ -38,12 +62,29 @@ extension CarBookingViewController: UITableViewDelegate, UITableViewDataSource
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 290
-    }
+        switch viewModel.viewType {
+        case .active:
+            return 500
+      
+            
+        case .upcoming:
+            return 430
+        case .ended:
+            return 290
+        default:
+            return 100
+
+        }    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+
+        switch viewModel.viewType {
+
+        default:
+            return viewModel.bookingList.value.count
+
+        }
+
     }
-    
     
     
     private func setUpTableView() {
@@ -52,33 +93,181 @@ extension CarBookingViewController: UITableViewDelegate, UITableViewDataSource
         tableView.separatorColor = UIColor.clear
 
 
-        tableView.register(UINib(nibName: "CarListingTableViewCell", bundle: nil), forCellReuseIdentifier: "cell1")
-
+        tableView.register(UINib(nibName: "CarBookingActiveTableViewCell", bundle: nil), forCellReuseIdentifier: "cell1")
+        tableView.register(UINib(nibName: "CarBookingUpcomingTableViewCell", bundle: nil), forCellReuseIdentifier: "cell2")
+        tableView.register(UINib(nibName: "CarBookingEndedTableViewCell", bundle: nil), forCellReuseIdentifier: "cell3")
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! CarListingTableViewCell
+        if (viewModel.viewType == .active)
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! CarListingTableViewCell
+
+            
+            let item = viewModel.bookingList.value[indexPath.row]
+
+            let url = URL.init(string: item.car.image_url)
+            
+            cell.imgView1?.af.setImage(withURL: url!)
+            cell.title1.text = "\u{2022} Driving"
+            cell.title2.text = item.car.plate_number
+            cell.title3.text = String(item.car.make + " " + item.car.name)
+            cell.title4.text = item.car.petrol_level
+            cell.title5.text = item.remaining_period
+            cell.title6.text = "time left"
+            cell.title7.text = item.total_period
+            cell.title8.text = "Extend time"
+            cell.title9.text = item.remaining_mileage
+            cell.title10.text = "Mileage Left"
+            cell.title11.text = String("Total " + item.remaining_mileage)
+            cell.title12.text = "Add mileage"
+            cell.title13.text = item.email
+
+  
+            stylingForTyle(cell:cell)
+
+            cell.buttonOneClicked = {
+                
+                
+                let alert = UIAlertController(title: "", message: "Hurray, found your car!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    switch action.style{
+                        case .default:
+                        print("default")
+                        
+                        case .cancel:
+                        print("cancel")
+                        
+                        case .destructive:
+                        print("destructive")
+                        
+                    @unknown default:
+                        break
+                    }
+                }))
+                
+                
+                self.present(alert, animated: true, completion: nil)
+
+            }
+            
+            cell.buttonTwoClicked = {
+                
+                self.viewModel.endRide(index: indexPath.row)
+                
+                
+                self.delegate?.routeTo(index: 2)
+
+                
+            }
+            
+            return cell
+
+        
+        }
+        else if (viewModel.viewType == .upcoming)
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! CarListingTableViewCell
+
+            
+            let item = viewModel.bookingList.value[indexPath.row]
+
+            let url = URL.init(string: item.car.image_url)
+
+            cell.imgView1?.af.setImage(withURL: url!)
+            cell.title1.text = "\u{2022} Upcoming"
+            cell.title2.text = item.car.plate_number
+            cell.title3.text = String(item.car.make + " " + item.car.name)
+            cell.title4.text = item.car.petrol_level
+            cell.title5.text = item.total_period
+            cell.title6.text = "Driving time"
+            cell.title9.text = item.total_mileage
+            cell.title10.text = "Driving mileage"
+            cell.title12.text = item.datetime
+            cell.title13.text = item.email
+
 
         
         
-        let url = URL.init(string: "https://w7.pngwing.com/pngs/1018/756/png-transparent-2018-mazda-cx-5-mazda6-car-mazda3-mazda-compact-car-car-mazda6.png")
-        
-        cell.imageView?.af.setImage(withURL: url!)
-        
-        cell.title1.text = "Mazda Mazda2"
-        cell.title2.text = "www1234"
-        cell.title3.text = "Setia Alam Welcome Centre"
-        cell.title4.text = "100%"
-        cell.title5.text = "9.7km"
-        cell.title6.text = "RM14.55"
-        cell.title7.text = "RM12.50"
-        cell.title8.text = "For 1 hour,0 minute"
+            stylingForTyle(cell:cell)
+            cell.buttonOneClicked = {
+                
+                self.viewModel.endRide(index: indexPath.row)
 
+                self.delegate?.routeTo(index: 2)
+            }
+            
+            return cell
+        
+        }
+        else if (viewModel.viewType == .ended)
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! CarListingTableViewCell
+
+            let item = viewModel.bookingList.value[indexPath.row]
+            let url = URL.init(string: item.car.image_url)
+
+
+            cell.imgView1?.af.setImage(withURL: url!)
+            cell.title1.text = "\u{2022} Ended"
+            cell.title2.text = item.car.plate_number
+            cell.title3.text = String(item.car.make + " " + item.car.name)
+            cell.title5.text = item.remaining_period
+            cell.title6.text = "time consumed"
+            cell.title7.text = String("of " + item.total_period)
+
+            cell.title9.text = item.remaining_mileage
+            cell.title10.text = "Mileage consumed"
+            cell.title11.text = String("of " + item.total_mileage)
+            cell.title12.text = item.datetime
+
+            stylingForTyle(cell:cell)
+
+            
+            cell.buttonOneClicked = {
+                
+                self.tabBarController?.selectedIndex = 0
+            }
+            
+            
+            return cell
+        }
+        return UITableViewCell()
+
+    }
     
-        return cell
+    
+    func stylingForTyle(cell:CarListingTableViewCell)
+    {
         
+        switch viewModel.viewType {
+        case .active:
+            
+            let image1 = UIImage(named: "petrol-station")!.withRenderingMode(.alwaysTemplate)
+            cell.imgView2.image = image1
+            cell.imgView2.tintColor = UIColor.systemTeal
+            cell.title1.textColor = .systemGreen
+            cell.title13.textColor = .darkGray
+
+            break
+        case .upcoming:
+            let image1 = UIImage(named: "petrol-station")!.withRenderingMode(.alwaysTemplate)
+            cell.imgView2.image = image1
+            cell.imgView2.tintColor = UIColor.systemTeal
+            cell.title1.textColor = .systemYellow
+            cell.title13.textColor = .darkGray
+
+            break
+        case .ended:
+            cell.title1.textColor = .systemGray
+            cell.title2.backgroundColor = .systemGray
+            break
+
+        default:break
+            
+        }
     }
 
 

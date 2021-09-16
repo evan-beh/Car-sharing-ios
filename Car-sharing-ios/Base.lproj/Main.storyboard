@@ -11,7 +11,7 @@
         <scene sceneID="4YD-5s-Yuh">
             <objects>
                 <navigationController navigationBarHidden="YES" id="Avu-nI-KKF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Booking" id="wQN-St-z4Q"/>
+                    <tabBarItem key="tabBarItem" title="Booking" image="ic-booking" id="wQN-St-z4Q"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xP1-CP-dnT">
                         <autoresizingMask key="autoresizingMask"/>
@@ -33,20 +33,28 @@
                         <viewControllerLayoutGuide type="bottom" id="S3G-vQ-AwA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6eW-cz-3W4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKI-2Z-mQR">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="705"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8Z-MT-nbq">
+                                <rect key="frame" x="16" y="76" width="75" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S3G-vQ-AwA" firstAttribute="top" secondItem="BKI-2Z-mQR" secondAttribute="bottom" id="3fr-YR-J65"/>
                             <constraint firstAttribute="trailing" secondItem="BKI-2Z-mQR" secondAttribute="trailing" id="6th-jI-4Jx"/>
                             <constraint firstItem="BKI-2Z-mQR" firstAttribute="leading" secondItem="6eW-cz-3W4" secondAttribute="leading" id="FUG-Ht-ya5"/>
-                            <constraint firstItem="BKI-2Z-mQR" firstAttribute="top" secondItem="3TA-Vl-mYp" secondAttribute="bottom" id="JyH-sk-4AH"/>
+                            <constraint firstItem="BKI-2Z-mQR" firstAttribute="top" secondItem="H8Z-MT-nbq" secondAttribute="bottom" constant="8" id="J6W-f5-qjT"/>
+                            <constraint firstItem="BKI-2Z-mQR" firstAttribute="top" secondItem="3TA-Vl-mYp" secondAttribute="bottom" constant="64" id="JyH-sk-4AH"/>
+                            <constraint firstItem="H8Z-MT-nbq" firstAttribute="leading" secondItem="6eW-cz-3W4" secondAttribute="leading" constant="16" id="te0-gh-ThN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Booking" id="Jta-Ve-Euz"/>
@@ -101,11 +109,23 @@
                         <viewControllerLayoutGuide type="bottom" id="CZJ-cA-Z6h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YSz-Kh-6pe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are hired!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auv-Qx-JWq">
+                                <rect key="frame" x="154.5" y="436" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CZJ-cA-Z6h" firstAttribute="top" secondItem="auv-Qx-JWq" secondAttribute="bottom" constant="356" id="HHD-Cc-PgA"/>
+                            <constraint firstItem="auv-Qx-JWq" firstAttribute="centerX" secondItem="YSz-Kh-6pe" secondAttribute="centerX" id="Yhi-n0-eqX"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Promos" id="MCv-Xn-F5H"/>
+                    <tabBarItem key="tabBarItem" title="Promos" image="ic-promos" id="MCv-Xn-F5H"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N80-k8-vFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,11 +140,11 @@
                         <viewControllerLayoutGuide type="bottom" id="WPX-Ab-3Fy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hqO-Mz-Lgt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="B4l-5B-ifF"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="ic-account" id="B4l-5B-ifF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ug-oj-tVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +159,7 @@
                         <viewControllerLayoutGuide type="bottom" id="i2T-td-WAl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kvo-iV-ALN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RhA-dr-zIu">
@@ -155,7 +175,7 @@
                             <constraint firstItem="RhA-dr-zIu" firstAttribute="leading" secondItem="kvo-iV-ALN" secondAttribute="leading" id="IkU-h7-MHL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" id="uq2-E4-0SF"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="ic-explore" id="uq2-E4-0SF"/>
                     <connections>
                         <outlet property="tableView" destination="RhA-dr-zIu" id="nSY-qv-tpC"/>
                     </connections>
@@ -168,16 +188,17 @@
         <scene sceneID="6Nf-hr-fpu">
             <objects>
                 <tabBarController id="uO2-1v-hyN" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k92-GO-CVu">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="k92-GO-CVu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="TN1-sh-HCR" kind="relationship" relationship="viewControllers" id="8CQ-Gx-bo1"/>
+                        <segue destination="Avu-nI-KKF" kind="relationship" relationship="viewControllers" id="Icx-AX-Uwk"/>
                         <segue destination="kt4-ZV-sW6" kind="relationship" relationship="viewControllers" id="bnt-Hv-PIs"/>
                         <segue destination="IbS-8J-hFM" kind="relationship" relationship="viewControllers" id="In2-en-Vkx"/>
-                        <segue destination="Avu-nI-KKF" kind="relationship" relationship="viewControllers" id="Icx-AX-Uwk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EjI-Br-xuv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,6 +207,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic-account" width="45" height="45"/>
+        <image name="ic-booking" width="45" height="45"/>
+        <image name="ic-explore" width="45" height="45"/>
+        <image name="ic-promos" width="45" height="45"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

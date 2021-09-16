@@ -6,9 +6,11 @@ target 'Car-sharing-ios' do
   use_frameworks!
   pod 'RxSwift', '6.2.0'
     pod 'RxCocoa', '6.2.0'
-    pod 'Moya/RxSwift'
+#    pod 'Moya/RxSwift'
     pod 'AlamofireImage', '~> 4.1'
     pod 'Parchment', '~> 3.0'
+    pod 'Firebase/Database'
+    pod 'CodableFirebase'
 
   # Pods for Car-sharing-ios
 

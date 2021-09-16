@@ -6,20 +6,31 @@
 //
 
 import UIKit
-
+import RxSwift
+import RxCocoa
 
 protocol CarListingInput {
     
     func viewDidLoad()
-}
-
-protocol CarListingOutput {
     
 }
 
-class CarListingViewModel: CarListingInput {
+protocol CarListingOutput {
+    var carList: BehaviorRelay<[Car]> { get }
+
+}
+
+class CarListingViewModel: CarListingInput, CarListingOutput {
+
+    let carList = BehaviorRelay<[Car]>(value: [])
+
     func viewDidLoad() {
         
+        CarApiService().getCarList { cars in
+            self.carList.accept(cars)
+
+            
+        }
     }
     
 

@@ -10,10 +10,12 @@ import Parchment
 
 
 
-class CarBookingMainViewController: UIViewController {
-
+class CarBookingMainViewController: UIViewController , BookingTabDelegate{
+   
     
     var viewControllers:[UIViewController] = [UIViewController]()
+    
+    var pagingViewController :PagingViewController?
     let items: [PagingItem] = [
         PagingIndexItem(index: 1, title: "Active"),
         PagingIndexItem(index: 2, title: "Upcoming"),
@@ -25,24 +27,32 @@ class CarBookingMainViewController: UIViewController {
         super.viewDidLoad()
         setupPager()
 
-        // Do any additional setup after loading the view.
     }
     
+    func routeTo(index: Int) {
+        pagingViewController?.select(index: index)
+    }
+    
+
 
     func setupPager()
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let firstViewController = storyboard.instantiateViewController(withIdentifier: "CarBookingViewController")
-        firstViewController.title = "Active"
-        let secondViewController = storyboard.instantiateViewController(withIdentifier: "CarBookingViewController")
-        secondViewController.title = "Upcoming"
-        let thirdViewController = storyboard.instantiateViewController(withIdentifier: "CarBookingViewController")
-        thirdViewController.title = "Ended"
+        let firstViewController = storyboard.instantiateViewController(withIdentifier: "CarBookingViewController") as! CarBookingViewController
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "CarBookingViewController") as! CarBookingViewController
+        let thirdViewController = storyboard.instantiateViewController(withIdentifier: "CarBookingViewController") as! CarBookingViewController
+
+        firstViewController.viewModel.viewType = viewType.active
+        secondViewController.viewModel.viewType = viewType.upcoming
+        thirdViewController.viewModel.viewType = viewType.ended
 
         viewControllers.append(firstViewController)
         viewControllers.append(secondViewController)
         viewControllers.append(thirdViewController)
 
+        firstViewController.delegate = self
+        secondViewController.delegate = self
+        thirdViewController.delegate = self
 
         
         let pagingViewController = PagingViewController()
@@ -72,6 +82,8 @@ class CarBookingMainViewController: UIViewController {
         pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
         contentView.constrainToEdges(pagingViewController.view)
         pagingViewController.didMove(toParent: self)
+        
+        self.pagingViewController = pagingViewController
     }
     
 

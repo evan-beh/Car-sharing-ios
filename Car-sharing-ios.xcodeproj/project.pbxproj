@@ -24,6 +24,17 @@
 		F902401126F224D0001689F1 /* CarListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902401026F224D0001689F1 /* CarListingViewModel.swift */; };
 		F902401426F22827001689F1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902401326F22827001689F1 /* UIView+Extension.swift */; };
 		F902401626F235AF001689F1 /* CarBookingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902401526F235AF001689F1 /* CarBookingMainViewController.swift */; };
+		F902401826F2E6A5001689F1 /* CarBookingActiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F902401726F2E6A5001689F1 /* CarBookingActiveTableViewCell.xib */; };
+		F902401B26F2EE4B001689F1 /* CarBookingEndedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F902401926F2EE4B001689F1 /* CarBookingEndedTableViewCell.xib */; };
+		F902401C26F2EE4B001689F1 /* CarBookingUpcomingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F902401A26F2EE4B001689F1 /* CarBookingUpcomingTableViewCell.xib */; };
+		F902402326F30D34001689F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F902402226F30D34001689F1 /* GoogleService-Info.plist */; };
+		F902402626F31B28001689F1 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902402526F31B28001689F1 /* Car.swift */; };
+		F902402826F31B7F001689F1 /* CarApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902402726F31B7F001689F1 /* CarApiService.swift */; };
+		F902402A26F32A25001689F1 /* Firebase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902402926F32A25001689F1 /* Firebase+Extension.swift */; };
+		F902402C26F33449001689F1 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902402B26F33448001689F1 /* Booking.swift */; };
+		F902402F26F33D1C001689F1 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902402E26F33D1C001689F1 /* StoreManager.swift */; };
+		F902403126F34D1E001689F1 /* CarBookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902403026F34D1E001689F1 /* CarBookingViewModel.swift */; };
+		F902403426F35E32001689F1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902403326F35E32001689F1 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +83,17 @@
 		F902401026F224D0001689F1 /* CarListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingViewModel.swift; sourceTree = "<group>"; };
 		F902401326F22827001689F1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F902401526F235AF001689F1 /* CarBookingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBookingMainViewController.swift; sourceTree = "<group>"; };
+		F902401726F2E6A5001689F1 /* CarBookingActiveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarBookingActiveTableViewCell.xib; sourceTree = "<group>"; };
+		F902401926F2EE4B001689F1 /* CarBookingEndedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarBookingEndedTableViewCell.xib; sourceTree = "<group>"; };
+		F902401A26F2EE4B001689F1 /* CarBookingUpcomingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarBookingUpcomingTableViewCell.xib; sourceTree = "<group>"; };
+		F902402226F30D34001689F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F902402526F31B28001689F1 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		F902402726F31B7F001689F1 /* CarApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarApiService.swift; sourceTree = "<group>"; };
+		F902402926F32A25001689F1 /* Firebase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Extension.swift"; sourceTree = "<group>"; };
+		F902402B26F33448001689F1 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		F902402E26F33D1C001689F1 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		F902403026F34D1E001689F1 /* CarBookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBookingViewModel.swift; sourceTree = "<group>"; };
+		F902403326F35E32001689F1 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		F9C43F5C50DDC9B38D3A1AD8 /* Pods-Car-sharing-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car-sharing-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-Car-sharing-iosTests/Pods-Car-sharing-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +151,7 @@
 		F9023FC726F21D3B001689F1 = {
 			isa = PBXGroup;
 			children = (
+				F902401D26F309E0001689F1 /* Resources */,
 				F9023FD226F21D3B001689F1 /* Car-sharing-ios */,
 				F9023FE926F21D3C001689F1 /* Car-sharing-iosTests */,
 				F9023FF426F21D3C001689F1 /* Car-sharing-iosUITests */,
@@ -151,9 +174,11 @@
 		F9023FD226F21D3B001689F1 /* Car-sharing-ios */ = {
 			isa = PBXGroup;
 			children = (
+				F902403226F35E22001689F1 /* Utility */,
+				F902402D26F33D0F001689F1 /* Store */,
+				F902402426F31B17001689F1 /* Model */,
 				F902401226F22816001689F1 /* Extension */,
 				F902400526F21E5D001689F1 /* Booking */,
-				F902400426F21E58001689F1 /* Main */,
 				F902400326F21E4B001689F1 /* Home */,
 				F9023FD326F21D3B001689F1 /* AppDelegate.swift */,
 				F9023FD526F21D3B001689F1 /* SceneDelegate.swift */,
@@ -190,22 +215,20 @@
 				F902400C26F22051001689F1 /* CarListingTableViewCell.swift */,
 				F902400D26F22051001689F1 /* CarListingTableViewCell.xib */,
 				F902401026F224D0001689F1 /* CarListingViewModel.swift */,
+				F902402726F31B7F001689F1 /* CarApiService.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		F902400426F21E58001689F1 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		F902400526F21E5D001689F1 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
 				F902400A26F21F2E001689F1 /* CarBookingViewController.swift */,
+				F902403026F34D1E001689F1 /* CarBookingViewModel.swift */,
 				F902401526F235AF001689F1 /* CarBookingMainViewController.swift */,
+				F902401726F2E6A5001689F1 /* CarBookingActiveTableViewCell.xib */,
+				F902401926F2EE4B001689F1 /* CarBookingEndedTableViewCell.xib */,
+				F902401A26F2EE4B001689F1 /* CarBookingUpcomingTableViewCell.xib */,
 			);
 			path = Booking;
 			sourceTree = "<group>";
@@ -214,8 +237,42 @@
 			isa = PBXGroup;
 			children = (
 				F902401326F22827001689F1 /* UIView+Extension.swift */,
+				F902402926F32A25001689F1 /* Firebase+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F902401D26F309E0001689F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F902402226F30D34001689F1 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F902402426F31B17001689F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F902402526F31B28001689F1 /* Car.swift */,
+				F902402B26F33448001689F1 /* Booking.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F902402D26F33D0F001689F1 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				F902402E26F33D1C001689F1 /* StoreManager.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		F902403226F35E22001689F1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F902403326F35E32001689F1 /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,9 +384,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9023FE026F21D3C001689F1 /* LaunchScreen.storyboard in Resources */,
+				F902402326F30D34001689F1 /* GoogleService-Info.plist in Resources */,
 				F9023FDD26F21D3C001689F1 /* Assets.xcassets in Resources */,
 				F9023FDB26F21D3B001689F1 /* Main.storyboard in Resources */,
+				F902401826F2E6A5001689F1 /* CarBookingActiveTableViewCell.xib in Resources */,
+				F902401B26F2EE4B001689F1 /* CarBookingEndedTableViewCell.xib in Resources */,
 				F902400F26F22051001689F1 /* CarListingTableViewCell.xib in Resources */,
+				F902401C26F2EE4B001689F1 /* CarBookingUpcomingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,10 +519,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F902401626F235AF001689F1 /* CarBookingMainViewController.swift in Sources */,
+				F902402C26F33449001689F1 /* Booking.swift in Sources */,
 				F902400B26F21F2E001689F1 /* CarBookingViewController.swift in Sources */,
 				F902401426F22827001689F1 /* UIView+Extension.swift in Sources */,
 				F902400826F21EAC001689F1 /* CarListingViewController.swift in Sources */,
+				F902403426F35E32001689F1 /* Utility.swift in Sources */,
+				F902403126F34D1E001689F1 /* CarBookingViewModel.swift in Sources */,
 				F902400E26F22051001689F1 /* CarListingTableViewCell.swift in Sources */,
+				F902402826F31B7F001689F1 /* CarApiService.swift in Sources */,
+				F902402A26F32A25001689F1 /* Firebase+Extension.swift in Sources */,
+				F902402F26F33D1C001689F1 /* StoreManager.swift in Sources */,
+				F902402626F31B28001689F1 /* Car.swift in Sources */,
 				F902401126F224D0001689F1 /* CarListingViewModel.swift in Sources */,
 				F9023FD426F21D3B001689F1 /* AppDelegate.swift in Sources */,
 				F9023FD626F21D3B001689F1 /* SceneDelegate.swift in Sources */,
@@ -642,13 +710,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				DEVELOPMENT_TEAM = 34HBZ7N6CX;
 				INFOPLIST_FILE = "Car-sharing-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fooddelivery.app.Car-sharing-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redbox.testing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -662,13 +730,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				DEVELOPMENT_TEAM = 34HBZ7N6CX;
 				INFOPLIST_FILE = "Car-sharing-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fooddelivery.app.Car-sharing-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redbox.testing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
